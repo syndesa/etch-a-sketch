@@ -1,10 +1,14 @@
+
 body {
     display: flex;
     flex-direction: column;
     align-items: center;
     height: 100vh;
     justify-content: center;
-    
+    /* cursor: url('./paintbrush.cur'), auto;  */
+    /* https://iconarchive.com/show/oxygen-icons-by-oxygen-icons.org/Actions-draw-brush-icon.html */
+    /* https://iconarchive.com/show/farm-fresh-icons-by-fatcow/draw-eraser-icon.html */
+    /* https://www.cursor.cc/? */
 }
 
 .grid-container {
@@ -13,8 +17,8 @@ body {
     grid-template-rows: repeat(var(--row-count), 1fr);
     height: 50vh;
     width: 50vh;
+    box-shadow: 0 4px 8px 0 rgb(0 0 0 / 20%), 0 6px 20px 0 rgb(0 0 0 / 19%);
     
-    /* margin: 50px; */
 }
 
 .grid-item {
@@ -28,17 +32,43 @@ body {
 .button-container{
     display: flex;
     gap:  10px;
+    justify-content: space-between;
+    width: 50vh;
+
 }
 
 
+.button-container>* {
+    transition: 0.2s;
+    box-shadow: 0 4px 8px 0 rgb(0 0 0 / 20%), 0 6px 20px 0 rgb(0 0 0 / 19%);
+    border: 1px solid black;
+    border-radius: 5px;
+    background-color: rgb(223, 222, 222);
+}
+.button-container>*:hover {
+    transform: translate(0, -2px);
+    cursor: pointer;
+}
+
 button, #color {
-    width: 150px;
+    width: 130px;
     height: 50px;
     margin-bottom: 10px;
-    margin-left: 20px;
 }
 
 
 .grid-color {
     background-color: transparent;
+}
+
+#eraser {
+    background: rgb(223, 222, 222)url('./draw-eraser-icon.png') 7px 8px no-repeat;
+    padding-left: 30px;
+}
+
+#color {
+    /* background: transparent url('./Actions-draw-brush-icon.png') left no-repeat; */
+    background: rgb(223, 222, 222) url('./Actions-draw-brush-icon.png') 5px 7px no-repeat;
+    
+    padding-left: 40px;
 }
