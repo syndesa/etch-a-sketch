@@ -1,9 +1,20 @@
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    justify-content: center;
+    
+}
+
 .grid-container {
     display: grid;
     grid-template-columns: repeat(var(--col-count), 1fr);
     grid-template-rows: repeat(var(--row-count), 1fr);
-    height: 100vh;
-    margin: 20px;
+    height: 50vh;
+    width: 50vh;
+    
+    /* margin: 50px; */
 }
 
 .grid-item {
@@ -18,12 +29,16 @@
     display: flex;
     gap:  10px;
 }
+
+
 button, #color {
     width: 150px;
     height: 50px;
     margin-bottom: 10px;
     margin-left: 20px;
 }
-/* .grid-item:hover {
-    background-color: aqua;
-} */
+
+
+.grid-color {
+    background-color: transparent;
+}

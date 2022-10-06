@@ -1,7 +1,6 @@
 const container = document.querySelector('.grid-container');
 const sizeButton = document.querySelector('#gridsize');
 const resetButton = document.querySelector('#reset');
-
 let mouseIsDown = false; 
 
 
@@ -9,7 +8,17 @@ document.addEventListener('mousedown', function() {mouseIsDown = true});
 document.addEventListener('mouseup', function() {mouseIsDown = false});
 document.ondragstart = function() {return false};
 
-resetButton.addEventListener('click', function() { initGrid(16,16);});
+
+// resetButton.addEventListener('click', function() { initGrid(16,16);});
+resetButton.addEventListener('click', clearCanvas);
+
+function clearCanvas(){
+    let tiles = document.querySelectorAll('.grid-item');
+    tiles.forEach((tile) => {
+        tile.style.backgroundColor = '';
+    });
+    
+}
 
 
 // Initialize a row * col grid layout
