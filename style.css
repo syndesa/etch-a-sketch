@@ -1,0 +1,23 @@
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(var(--col-count), 1fr);
+    grid-template-rows: repeat(var(--row-count), 1fr);
+    height: 100vh;
+}
+
+.grid-item {
+    display: flex;
+    border: 1px solid black;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+button {
+    width: 150px;
+    height: 50px;
+    margin-bottom: 10px;
+}
+/* .grid-item:hover {
+    background-color: aqua;
+} */
